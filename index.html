@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creativo Gartengestaltung – Ihr Garten, Ihr Paradies</title>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --green-main: #7cb342;
+        --green-dark: #4a7c24;
+        --leaf: #99c24d;
+        --earth: #8d5a3b;
+        --cream: #f7f5ec;
+        --white: #ffffff;
+        --text: #243019;
+        --accent: #f0c14b;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--cream);
+        color: var(--text);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* GLOBAL */
+      section {
+        padding: 90px 7%;
+        position: relative;
+      }
+      h2.section-title {
+        font-family: "Caveat", cursive;
+        font-size: 3rem;
+        text-align: center;
+        color: var(--green-dark);
+        margin-bottom: 1rem;
+      }
+      .section-sub {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        font-size: 0.98rem;
+      }
+      .btn-main {
+        display: inline-block;
+        padding: 13px 30px;
+        border-radius: 40px;
+        background: linear-gradient(
+          135deg,
+          var(--green-main),
+          var(--green-dark)
+        );
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transition: all 0.3s ease;
+      }
+      .btn-main:hover {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      /* HERO */
+      header {
+        height: 100vh;
+        position: relative;
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35)),
+          url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=90")
+            center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        overflow: hidden;
+      }
+      header::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background: url("https://svgshare.com/i/13X7.svg") center bottom
+          repeat-x;
+        background-size: contain;
+      }
+      .hero-inner {
+        position: relative;
+        text-align: center;
+        max-width: 800px;
+        padding: 0 20px;
+        z-index: 2;
+      }
+      .logo-text {
+        font-family: "Caveat", cursive;
+        font-size: 4.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+      }
+      .logo-tag {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        margin-bottom: 18px;
+      }
+      .hero-inner p {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+      }
+      .hero-meta {
+        margin-top: 18px;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      /* WELCOME / TEXT IMAGE SPLIT */
+      .welcome {
+        background: var(--white);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        border-top-left-radius: 120px;
+        border-bottom-right-radius: 120px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        margin-top: -40px;
+        position: relative;
+        z-index: 3;
+      }
+      .welcome-text {
+        flex: 1 1 55%;
+        padding: 40px;
+      }
+      .welcome-text h2 {
+        font-family: "Caveat", cursive;
+        font-size: 2.7rem;
+        color: var(--green-dark);
+        margin-bottom: 10px;
+      }
+      .welcome-text p {
+        font-size: 0.98rem;
+      }
+      .welcome-quote {
+        margin-top: 15px;
+        font-style: italic;
+        font-size: 0.9rem;
+        border-left: 3px solid var(--green-main);
+        padding-left: 12px;
+        color: #516141;
+      }
+      .welcome-image {
+        flex: 1 1 40%;
+        min-height: 260px;
+        background: url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=90")
+          center/cover no-repeat;
+        border-radius: 0 0 120px 0;
+      }
+
+      /* PERSON */
+      .person-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .person-photo {
+        flex: 0 0 220px;
+        text-align: center;
+      }
+      .person-photo-inner {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        margin: 0 auto 15px;
+        background: url("Marcel_Gehrig_2.jpg") center/cover no-repeat;
+        border: 5px solid var(--green-main);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+      }
+      .person-photo span {
+        font-weight: 600;
+        font-size: 0.95rem;
+        display: block;
+      }
+      .person-text {
+        flex: 1 1 55%;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 25px 30px;
+        border-radius: 18px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        font-size: 0.95rem;
+      }
+
+      /* SERVICES (GESTALTUNG + UNTERHALT) */
+      .services {
+        background: linear-gradient(
+          135deg,
+          var(--green-main),
+          var(--green-dark)
+        );
+        color: #fff;
+      }
+      .services .section-title {
+        color: #fff;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+      }
+      .service-card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 24px 22px;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(3px);
+      }
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .service-card h3 {
+        font-family: "Caveat", cursive;
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+      .service-card p {
+        font-size: 0.93rem;
+        margin-bottom: 10px;
+      }
+      .service-card ul {
+        list-style: disc;
+        padding-left: 18px;
+        font-size: 0.9rem;
+      }
+      .service-card ul li {
+        margin-bottom: 4px;
+      }
+
+      /* GALLERY */
+      .gallery {
+        background: var(--cream);
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+      }
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+      }
+      .gallery-item img {
+        width: 100%;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.07);
+      }
+      .gallery-badge {
+        position: absolute;
+        left: 12px;
+        bottom: 10px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 0.78rem;
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+
+      /* CONTACT */
+      .contact {
+        background: var(--green-dark);
+        color: #fff;
+      }
+      .contact-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: flex-start;
+      }
+      .contact-details {
+        flex: 1 1 40%;
+        font-size: 0.95rem;
+      }
+      .contact-details h3 {
+        font-family: "Caveat", cursive;
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+      .contact-details p {
+        margin-bottom: 6px;
+      }
+      .contact-form {
+        flex: 1 1 45%;
+      }
+      .contact-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 11px 13px;
+        border-radius: 8px;
+        border: none;
+        font-size: 0.95rem;
+      }
+      .contact-form textarea {
+        min-height: 110px;
+      }
+      .contact-form button {
+        border: none;
+        cursor: pointer;
+      }
+
+      footer {
+        background: #111;
+        color: #ccc;
+        text-align: center;
+        padding: 18px 10px;
+        font-size: 0.85rem;
+      }
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* ANIMATIONS ON SCROLL */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(35px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 920px) {
+        .welcome {
+          border-radius: 40px;
+        }
+        .welcome-text {
+          padding: 25px;
+        }
+        header {
+          background-position: center;
+        }
+      }
+      @media (max-width: 768px) {
+        header {
+          height: 90vh;
+        }
+        .logo-text {
+          font-size: 3.2rem;
+        }
+        .welcome {
+          margin-top: -25px;
+        }
+        section {
+          padding: 70px 6%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <header id="top">
+      <div class="hero-inner">
+        <div class="logo-text">Creativo</div>
+        <div class="logo-tag">Gartengestaltung Berikon</div>
+        <p>
+          Ich verwandle Ihr Stück Land, Ihre Terrasse oder Ihren Balkon in ein
+          persönliches Paradies – mit Leidenschaft, Ideenreichtum und einem
+          guten Auge für das Wesentliche.
+        </p>
+        <a href="#kontakt" class="btn-main">Jetzt Gartenbesuch anfragen</a>
+        <div class="hero-meta">
+          Oberdorfstrasse 33 · 8965 Berikon · 079 832 78 12
+        </div>
+      </div>
+    </header>
+
+    <!-- WELCOME -->
+    <section>
+      <div class="welcome fade-in" id="willkommen">
+        <div class="welcome-text">
+          <h2>Herzlich willkommen</h2>
+          <p>
+            Wer den «grünen Daumen» hat, ist in der Regel mit Leidenschaft
+            ausgestattet. Um ein Stück Land, eine Dachterrasse, einen Balkon
+            oder auch das Zuhause in ein kleines Paradies zu verwandeln. Genau
+            diese Passion ist es, die mich tagtäglich antreibt, mein Bestes zu
+            geben.
+          </p>
+          <p style="margin-top: 10px">
+            Ich gestalte und pflege Ihren Garten auf Wunsch nach meinen, aber
+            vor allem nach Ihren Visionen. Gerne unterstütze ich Sie auch dabei,
+            Ihren eigenen Ideen auf die Sprünge zu helfen – ganz gleich ob Sie
+            einen gemütlichen Rückzugsort, üppige Blütenpracht oder eine
+            funktionale Gartenstruktur wünschen.
+          </p>
+          <div class="welcome-quote">
+            «Wenn Pflanzen, gleichgültig welcher Farben und Formen,
+            zusammenstehen, kann niemals ein Bild der Disharmonie entstehen.» –
+            Vincent van Gogh
+          </div>
+        </div>
+        <div class="welcome-image"></div>
+      </div>
+    </section>
+
+    <!-- PERSON -->
+    <section id="person" class="fade-in">
+      <h2 class="section-title">Zu meiner Person</h2>
+      <p class="section-sub">
+        Seit 2006 selbständig als Creativo Gartengestaltung – Gärtner aus
+        Leidenschaft, mit Herz für Natur, Menschen und individuelle Gärten.
+      </p>
+      <div class="person-wrap">
+        <div class="person-photo">
+          <div class="person-photo-inner"></div>
+          <span>Marcel Gehrig</span>
+          <small>Inhaber · Creativo Gartengestaltung</small>
+        </div>
+        <div class="person-text">
+          <p>
+            Ich habe mich 2006 selbständig gemacht und Creativo Gartenbau
+            gegründet. Ich liebe meinen Beruf und habe mir mit diesem Schritt
+            meinen persönlichen Traum erfüllt. In und mit der Natur zu arbeiten
+            bedeutet für mich Hingabe und nicht zuletzt Erfüllung.
+          </p>
+          <p>
+            Ich arbeite zwar solo, habe aber für umfangreichere Jobs das nötige
+            Netzwerk. Leidenschaftliche Gärtner arbeiten nicht nur, wenn die
+            Sonne scheint – auch widerspenstige Bäume, Brennnesseln und
+            Wespenstiche gehören dazu. Trotzdem überwiegt für mich die Freude,
+            zusammen mit meinen Kundinnen und Kunden einzigartige Gartenräume zu
+            schaffen.
+          </p>
+          <p>
+            Wichtig sind mir Fairness, Offenheit für neue Erkenntnisse und ein
+            respektvoller Umgang mit der Natur. So arbeite ich beispielsweise
+            auch mit Mondphasen oder setze bei Pflanzen auf homöopathische
+            Unterstützung – mit guten Erfahrungen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES: GARTENGESTALTUNG & UNTERHALT -->
+    <section class="services" id="leistungen">
+      <h2 class="section-title">Gartengestaltung & Gartenunterhalt</h2>
+      <p class="section-sub">
+        Vom ersten Gespräch bis zum letzten Feinschliff – Ihr Garten entsteht
+        Schritt für Schritt, Note für Note. Und bleibt dank sorgfältigem
+        Unterhalt dauerhaft in Form.
+      </p>
+
+      <div class="service-grid fade-in">
+        <div class="service-card">
+          <h3>Gartengestaltung</h3>
+          <p>
+            Ob Viola arvensis, Rosaceae, Buxus oder Lavendel – wichtiger als
+            lateinische Namen sind Ihre Wünsche. Ich berate Sie vor Ort, direkt
+            in Ihrem Garten, statt auf dem Papier.
+          </p>
+          <p>
+            Es gibt nicht «den» Garten. Individualität und Persönlichkeit zählen
+            mehr als Normen und Formen. Gemeinsam entwickeln wir Ideen, die zu
+            Ihnen, Ihrem Haus und Ihrem Alltag passen.
+          </p>
+          <ul>
+            <li>Beratung im Garten vor Ort</li>
+            <li>Entwicklung individueller Gartenkonzepte</li>
+            <li>Auswahl von Materialien & Pflanzen mit Musterstücken</li>
+            <li>Umsetzung Schritt für Schritt – Work in Progress</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Gartenunterhalt</h3>
+          <p>
+            Wenn Sie sich mehr mit Blattläusen als mit Rosen beschäftigen müssen
+            oder das Gras schneller wächst als Ihnen lieb ist, übernehme ich den
+            Unterhalt Ihres Gartens – punktuell oder im Abo.
+          </p>
+          <p>
+            Ich sorge dafür, dass Rosen wieder blühen, Bäume nicht ins
+            Wohnzimmer wachsen und das Gleichgewicht zwischen gewolltem und
+            ungewolltem Wuchs erhalten bleibt.
+          </p>
+          <ul>
+            <li>Regelmässiger Gartenunterhalt oder Einzelaufträge</li>
+            <li>Rasenpflege, Schnittarbeiten, Pflanzungen</li>
+            <li>Zuverlässig, sorgfältig und mit eigenem Werkzeug</li>
+            <li>Vertrauensvolle Betreuung Ihres Gartens</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery fade-in" id="galerie">
+      <h2 class="section-title">Einblicke in realisierte Gärten</h2>
+      <p class="section-sub">
+        Von liebevoll gepflegten Vorgärten bis zu komplett neu gestalteten
+        Gartenanlagen – hier sehen Sie eine Auswahl von Projekten, die aus
+        Wiesen, Höfen und Terrassen entstanden sind.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1469796466635-455ede028aca?auto=format&fit=crop&w=900&q=90"
+            alt="Gartenweg"
+          />
+          <span class="gallery-badge">Eingangsbereich</span>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1469796466635-455ede028aca?auto=format&fit=crop&w=900&q=70"
+            alt="Garten"
+          />
+          <span class="gallery-badge">Ruhiger Sitzplatz</span>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+            alt="Rasen und Bäume"
+          />
+          <span class="gallery-badge">Garten mit Rasenfläche</span>
+        </div>
+        <div class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80"
+            alt="Detailbepflanzung"
+          />
+          <span class="gallery-badge">Detailbepflanzung</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact fade-in" id="kontakt">
+      <div class="contact-inner">
+        <div class="contact-details">
+          <h3>Kontakt</h3>
+          <p><strong>Creativo Gartengestaltung</strong><br />Marcel Gehrig</p>
+          <p>Oberdorfstrasse 33<br />8965 Berikon</p>
+          <p>Telefon: 079 832 78 12<br />E-Mail: info@creativogarten.ch</p>
+          <p style="margin-top: 10px">
+            Ich freue mich auf Ihre Kontaktaufnahme – am liebsten direkt mit
+            einem Besuch in Ihrem Garten.
+          </p>
+          <a href="tel:0798327812" class="btn-main" style="margin-top: 10px"
+            >Jetzt anrufen</a
+          >
+        </div>
+        <div class="contact-form">
+          <form>
+            <input type="text" placeholder="Ihr Name" required />
+            <input type="email" placeholder="Ihre E-Mail" required />
+            <textarea
+              placeholder="Ihre Nachricht – gerne mit kurzem Hinweis zu Ihrem Garten."
+            ></textarea>
+            <button type="submit" class="btn-main">Nachricht senden</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Creativo Gartengestaltung · Built by
+      <a href="https://wpguru.in" target="_blank" rel="noopener">WPGuru</a>
+    </footer>
+
+    <script>
+      const faders = document.querySelectorAll(".fade-in");
+      const obs = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      faders.forEach((el) => obs.observe(el));
+    </script>
+  </body>
+</html>
